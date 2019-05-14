@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 class DiagnosisCode(models.Model):
-	category_code = models.CharField(max_length=4)
-	diagnosis_code = models.CharField(max_length=5)
-	full_code = models.CharField(max_length=7)
+	category_code = models.CharField(max_length=10)
+	diagnosis_code = models.CharField(max_length=10)
+	full_code = models.CharField(max_length=10)
 	abbreviated_description = models.CharField(max_length=100)
 	full_description = models.CharField(max_length=255)
 	category_title = models.CharField(max_length=100)
