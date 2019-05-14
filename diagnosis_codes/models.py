@@ -5,9 +5,9 @@ class DiagnosisCode(models.Model):
 	category_code = models.CharField(max_length=10)
 	diagnosis_code = models.CharField(max_length=10)
 	full_code = models.CharField(max_length=10)
-	abbreviated_description = models.CharField(max_length=100)
+	abbreviated_description = models.CharField(max_length=255)
 	full_description = models.CharField(max_length=255)
-	category_title = models.CharField(max_length=100)
+	category_title = models.CharField(max_length=255)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 	
