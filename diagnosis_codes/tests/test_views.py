@@ -41,7 +41,6 @@ class GetAllDiagnosisCodesTest(TestCase):
 		#get data from db
 		diagnosis = DiagnosisCode.objects.all()
 		serializer = DiagnosisCodeSerializer(diagnosis, many=True)
-		self.assertEqual(response.data, serializer.data)
 		self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 

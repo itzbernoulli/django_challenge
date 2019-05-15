@@ -36,7 +36,7 @@ def get_post_diagnosis(request):
 	if request.method == 'GET':
 		paginator = PageNumberPagination()
 		paginator.page_size = 20
-		diagnosis = DiagnosisCode.objects.all()
+		diagnosis = DiagnosisCode.objects.get_queryset().order_by('id')
 		result_page = paginator.paginate_queryset(diagnosis, request)
 		serializer = DiagnosisCodeSerializer(result_page,many=True)
 		return paginator.get_paginated_response(serializer.data)
